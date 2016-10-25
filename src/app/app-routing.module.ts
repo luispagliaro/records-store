@@ -3,7 +3,7 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 
-import { AuthGuard } from './auth/auth-guard.service';
+import { AuthGuard } from './core/auth/auth-guard.service';
 
 @NgModule({
     imports: [

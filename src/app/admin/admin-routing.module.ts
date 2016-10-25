@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { ManageRecordsComponent } from './manage-records.component';
 
-import { AuthGuard } from '../auth/auth-guard.service';
+import { AuthGuard } from '../core/auth/auth-guard.service';
 
 @NgModule({
     imports: [

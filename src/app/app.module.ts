@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api/in-memory-web-api.module';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './core/in-memory-data.service';
 import './rxjs-extensions';
 
 import { AppComponent } from './app.component';
