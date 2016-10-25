@@ -32,7 +32,7 @@ export class RecordDetailComponent implements OnInit {
         });*/
     }
 
-    updateProduct(): void {
+    updateRecord(): void {
         this.recordService.updateRecord(this.record)
             .subscribe(() => this.goBack());
     }
