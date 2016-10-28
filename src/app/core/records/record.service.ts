@@ -25,7 +25,7 @@ export class RecordService {
 
     getRecord(id: number): Observable<Record> {
         return this.getRecords()
-            .map((records: Record[]) => records.find(r => r.id === id))
+            .map((records: Record[]) => records.find(r => r.id === id));
     }
 
     addRecord(title: string): Observable<Record> {
@@ -35,7 +35,7 @@ export class RecordService {
     }
 
     updateRecord(record: Record): Observable<Record> {
-        const url: string = `${this.recordsUrl}/${record.id}`;
+        const url = `${this.recordsUrl}/${record.id}`;
 
         return this.http.put(url, JSON.stringify(record), this.headers)
             .map(() => record)
@@ -43,7 +43,7 @@ export class RecordService {
     }
 
     deleteRecord(id: number): Observable<void> {
-        const url: string = `${this.recordsUrl}/${id}`;
+        const url = `${this.recordsUrl}/${id}`;
 
         return this.http.delete(url, this.headers)
             .catch(this.handleError);

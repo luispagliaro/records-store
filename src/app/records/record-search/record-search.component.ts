@@ -15,7 +15,8 @@ import { Record } from '../shared/record.model';
 })
 export class RecordSearchComponent implements OnInit {
     records: Observable<Record[]>;
-    private searchTerms = new Subject<string>(); //Subject is a producer of an observable event stream.
+    // Subject is a producer of an observable event stream.
+    private searchTerms = new Subject<string>();
 
     constructor(
         private recordSearchService: RecordSearchService,

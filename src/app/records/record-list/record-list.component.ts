@@ -53,7 +53,7 @@ export class RecordListComponent implements OnInit {
         this.recordService
             .deleteRecord(record.id)
             .subscribe(() => {
-                this.records = this.records.filter(r => r != record);
+                this.records = this.records.filter(r => r !== record);
 
                 if (this.selectedRecord === record) {
                     this.selectedRecord = null;

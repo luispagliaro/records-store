@@ -1,16 +1,15 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async, inject } from '@angular/core/testing';
+import { Http } from '@angular/http';
+import { inject } from '@angular/core/testing';
+
 import { RecordService } from './record.service';
 
 describe('Service: Record', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [RecordService]
+    it('should create an instance', () => {
+        inject([Http], (http: Http) => {
+            let service = new RecordService(http);
+            expect(service).toBeTruthy();
+        });
     });
-  });
-
-  it('should ...', inject([RecordService], (service: RecordService) => {
-    expect(service).toBeTruthy();
-  }));
 });
