@@ -28,8 +28,8 @@
   "devDependencies": {
     "@types/jasmine": "^2.5.36",
     "@types/node": "^6.0.46",
-    "angular-cli": "^1.0.0-beta.18",
-    "angular-in-memory-web-api": "^0.1.12",
+    "angular-cli": "^1.0.0-beta.19-3",
+    "angular-in-memory-web-api": "^0.1.14",
     "codelyzer": "^1.0.0-beta.2",
     "jasmine-core": "^2.4.1",
     "jasmine-spec-reporter": "^2.5.0",
