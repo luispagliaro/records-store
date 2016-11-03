@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { Record } from '../shared/record.model';
 
 import { RecordService } from '../../core/records/record.service';
+import { AuthService } from '../../core/auth/auth.service';
 
 @Component({
     selector: 'app-record-detail',
@@ -13,17 +14,21 @@ import { RecordService } from '../../core/records/record.service';
 })
 export class RecordDetailComponent implements OnInit {
     private record: Record;
+    private loggedIn: boolean;
 
     constructor(
         private recordService: RecordService,
         private route: ActivatedRoute,
-        private location: Location
+        private location: Location,
+        private authService: AuthService
     ) { }
 
     ngOnInit() {
         this.route.data.forEach((data: { record: Record }) => {
             this.record = data.record;
         });
+
+        this.loggedIn = this.authService.isLoggedIn;
         /*this.route.params.forEach((params: Params) => {
             let id = +params['id'];
 

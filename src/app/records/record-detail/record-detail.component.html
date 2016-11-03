@@ -9,11 +9,11 @@
 		<label>Title:</label> {{record.title}}
 	</div>
 
-	<div>
+	<div *ngIf="loggedIn">
 		<input type="text" [(ngModel)]="record.title">
-	</div>
 
-	<button (click)="updateRecord()">Save</button>
+		<button (click)="updateRecord()">Save</button>
+	</div>
 
 	<button (click)="goBack()">Back</button>
 </div>

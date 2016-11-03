@@ -34,7 +34,6 @@ export class RecordListComponent implements OnInit {
                 records => this.records = records,
                 error => this.errorMessage = <any>error
             );
-
     }
 
     addRecord(title: string): void {
