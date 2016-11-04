@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Record } from '../shared/record.model';
 
 import { RecordService } from '../../core/records/record.service';
+import { AuthService } from '../../core/auth/auth.service';
 
 @Component({
     selector: 'app-records',
@@ -14,14 +15,18 @@ export class RecordListComponent implements OnInit {
     records: Record[];
     selectedRecord: Record;
     errorMessage: string;
+    private loggedIn: boolean;
 
     constructor(
         private recordService: RecordService,
-        private router: Router
+        private router: Router,
+        private authService: AuthService
     ) { }
 
     ngOnInit(): void {
         this.getRecords();
+
+        this.loggedIn = this.authService.isLoggedIn;
     }
 
     onSelect(record: Record): void {

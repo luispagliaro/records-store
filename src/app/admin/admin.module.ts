@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdminComponent } from './admin.component';
-import { ManageRecordsComponent } from './manage-records.component';
+import { ManageRecordsComponent } from './manage-records/manage-records.component';
+import { ManageBandsComponent } from './manage-bands/manage-bands.component';
 
 import { AdminRoutingModule } from './admin-routing.module';
 
@@ -11,6 +12,6 @@ import { AdminRoutingModule } from './admin-routing.module';
         CommonModule,
         AdminRoutingModule
     ],
-    declarations: [AdminComponent, ManageRecordsComponent]
+    declarations: [AdminComponent, ManageRecordsComponent, ManageBandsComponent]
 })
 export class AdminModule { }

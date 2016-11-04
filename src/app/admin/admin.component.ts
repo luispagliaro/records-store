@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: `<router-outlet></router-outlet>`
+    templateUrl: './admin.component.html',
+    styleUrls: ['./admin.component.css']
 })
-export class AdminComponent  {}
+export class AdminComponent { }

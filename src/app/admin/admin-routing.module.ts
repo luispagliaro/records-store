@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
-import { ManageRecordsComponent } from './manage-records.component';
+import { ManageRecordsComponent } from './manage-records/manage-records.component';
+import { ManageBandsComponent } from './manage-bands/manage-bands.component';
 
 import { AuthGuard } from '../core/auth/auth-guard.service';
 
@@ -18,7 +19,9 @@ import { AuthGuard } from '../core/auth/auth-guard.service';
                         path: '',
                         canActivateChild: [AuthGuard],
                         children: [
-                            { path: '', component: ManageRecordsComponent }
+                            { path: '', redirectTo: 'manage-records' },
+                            { path: 'manage-records', component: ManageRecordsComponent },
+                            { path: 'manage-bands', component: ManageBandsComponent }
                         ]
                     }
                 ]
