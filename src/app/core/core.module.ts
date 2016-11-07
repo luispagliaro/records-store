@@ -9,8 +9,6 @@ import { NavComponent } from './nav/nav.component';
 import { RecordService } from './records/record.service';
 import { RecordSearchService } from './records/record-search.service';
 
-import { AppRoutingModule } from '../app-routing.module';
-
 @NgModule({
     imports: [
         CommonModule,

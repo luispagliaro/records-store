@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AuthGuard } from './core/auth/auth-guard.service';
+
 
 @NgModule({
     imports: [
@@ -28,9 +30,13 @@ import { AuthGuard } from './core/auth/auth-guard.service';
                 canLoad: [AuthGuard]
             },
             {
+                path: 'login',
+                component: LoginComponent
+            },
+            {
                 path: '**',
                 component: PageNotFoundComponent
-            }
+            },
         ],
             { preloadingStrategy: PreloadAllModules }
         )

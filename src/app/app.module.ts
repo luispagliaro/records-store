@@ -12,9 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { CoreModule } from './core/core.module';
+import { LoginModule }   from './login/login.module';
 
 import { AppRoutingModule } from './app-routing.module';
-import { LoginRoutingModule }   from './login/login-routing.module';
 
 @NgModule({
     imports: [
@@ -23,12 +23,11 @@ import { LoginRoutingModule }   from './login/login-routing.module';
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         CoreModule,
         AppRoutingModule,
-        LoginRoutingModule
+        LoginModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent,
         PageNotFoundComponent
     ],
     bootstrap: [ AppComponent ]
