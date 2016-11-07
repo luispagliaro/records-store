@@ -16,7 +16,7 @@ import { AppRoutingModule } from '../app-routing.module';
         CommonModule,
         RouterModule
     ],
-    exports: [NavComponent],
+    exports: [ NavComponent ],
     declarations: [ NavComponent ],
     providers: [
         RecordService,

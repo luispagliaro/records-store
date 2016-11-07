@@ -9,9 +9,8 @@ import './rxjs-extensions';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-import { RecordsModule } from './records/records.module';
-import { AdminModule } from './admin/admin.module';
 import { CoreModule } from './core/core.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +28,8 @@ import { LoginRoutingModule }   from './login/login-routing.module';
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        PageNotFoundComponent
     ],
     bootstrap: [ AppComponent ]
 })

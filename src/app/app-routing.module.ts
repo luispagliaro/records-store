@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AuthGuard } from './core/auth/auth-guard.service';
 
@@ -25,6 +26,10 @@ import { AuthGuard } from './core/auth/auth-guard.service';
                 path: 'admin',
                 loadChildren: 'app/admin/admin.module#AdminModule',
                 canLoad: [AuthGuard]
+            },
+            {
+                path: '**',
+                component: PageNotFoundComponent
             }
         ],
             { preloadingStrategy: PreloadAllModules }
