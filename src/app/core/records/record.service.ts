@@ -55,7 +55,7 @@ export class RecordService {
         return body.data || {};
     }
 
-    private handleError(error: any): Observable<string> {
+    private handleError(error: Response | any) {
         let errMsg: string = (error.message) ? error.message :
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
 
