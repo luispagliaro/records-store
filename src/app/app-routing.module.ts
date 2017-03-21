@@ -22,11 +22,11 @@ import { AuthGuard } from './core/auth/auth-guard.service';
             },
             {
                 path: 'records',
-                loadChildren: 'app/records/records.module#RecordsModule'
+                loadChildren: './records/records.module#RecordsModule'
             },
             {
                 path: 'admin',
-                loadChildren: 'app/admin/admin.module#AdminModule',
+                loadChildren: './admin/admin.module#AdminModule',
                 canLoad: [AuthGuard]
             },
             {

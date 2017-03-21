@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class RecordDetailResolveService implements Resolve<Record> {
     constructor(private recordService: RecordService, private router: Router) { }
 
-    resolve(route: ActivatedRouteSnapshot): Observable<Record | boolean> {
+    resolve(route: ActivatedRouteSnapshot): Observable<Record> {
         let id = +route.params['id'];
 
         return this.recordService.getRecord(id)
@@ -20,7 +20,7 @@ export class RecordDetailResolveService implements Resolve<Record> {
                 } else {
                     this.router.navigate(['/records']);
 
-                    return false;
+                    return null;
                 }
             });
     }
